@@ -41,6 +41,7 @@ class SqlFailureEx(APIException):
             ex=ex,
         )
 
+
 class APIQueryStringEx(APIException):
     def __init__(self, ex: Exception = None):
         super().__init__(
@@ -50,4 +51,3 @@ class APIQueryStringEx(APIException):
             code=f"{StatusCode.HTTP_400}{'7'.zfill(4)}",
             ex=ex,
         )
-
