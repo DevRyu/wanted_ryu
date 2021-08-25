@@ -2,8 +2,7 @@ import logging
 import itertools
 from flask import Blueprint, request
 
-from manage import db
-from wanted.models import Company, CompanyLang, TagLang, CompanyTag
+from models.company_model import db, Company, CompanyLang, TagLang, CompanyTag
 
 api = Blueprint('api', __name__)
 

@@ -10,11 +10,14 @@ COPY . /wanted_project
 WORKDIR /wanted_project
 
 RUN pip3 install -r requirements.txt
+WORKDIR /wanted_project/wanted
+
 ENV FLASK_APP=wsgi.py
+
 
 
 # Listen to port 5000 at runtime
 EXPOSE 5000
 
 # Define our command to be run when launching the container
-CMD sh run.sh
+CMD python3 wsgi.py

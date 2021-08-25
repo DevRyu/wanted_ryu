@@ -32,3 +32,5 @@ services:
         MYSQL_PASSWORD: wanted
         MYSQL_ROOT_PASSWORD: wanted
         MYSQL_DATABASE: wanteddb
+    volumes:
+      - "./init/:/docker-entrypoint-initdb.d/"
